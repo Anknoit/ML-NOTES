@@ -1,0 +1,10 @@
+PRIMARY KEY
+1. The table with PRIMARY KEY(PK) is called REFERENCED/PARENT TABLE
+   The table with FOREIGN KEY(FK) is called the CHILD TABLE
+2. PK has UNIQUE value, CANNOT contain NULL VALUE.
+3. Only 1 PK allowed in any table 
+FK is a field/collection of field in one table that refers to primary key of anoher table.
+
+RELATIONSHIPS
+1. ONE-to-MANY
+2. MANY-to-ONE

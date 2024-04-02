@@ -1,0 +1,18 @@
+1. Django settings.py format
+>>>DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': '<DB_NAME>',
+        'USER': 'postgres',
+        'PASSWORD':'<PASSWORD>',
+        'HOST':'localhost',
+        'PORT':'5432',
+    }
+}
+
+2. When migrating from one DB(sql) to another(postgre)
+	1.create a backup of database for migrating from one DB to another
+	>>>python manage.py dumpdata > datadump.json
+	2. Create DB in pgadmin
+	3. python manage.py migrate --run-syncdb
+	4. python manage.py loaddata datadump.json

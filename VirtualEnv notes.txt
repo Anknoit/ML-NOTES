@@ -1,0 +1,38 @@
+WHY CREATE VIRTUAL ENVIRONMENT??
+>>>
+pip install virtualenv
+1. Creating virtual env
+>>> virtualenv <project_name>
+2. Activating Virtualenv
+>>> .\<project_name>\Scripts\activate
+>>> if error comes that script can not be loaded because running script is disabled than
+open powershell as admin and type 
+>>>set-executionpolicy remotesigned
+3. Deactivating/Coming out of the virtualenv
+>>> deactivate
+4.REQUIRMENTS.txt
+>>>Ceate this to specify all the modules used in the project with their specific 
+   versions in a text file important while you hand over the project to the client and 
+   after sometime to avoid mismatching of functions due to different versions of the module
+	4.1 How to list all the modules used in the virtual environment with their versions
+	>>>pip freeze > requirements.txt
+	4.2How to install all the modules given in the requirements.txt all at once
+	>>>pip install -r requirements.txt
+5.How to install all the packages already installed in system to reinstall inside your virtualenv
+>>>virtualenv --system-site-packages <project/virtualenv name>
+6.How to create a backup of database for migrating from one DB to another
+>>>python manage.py dumpdata > datadump.json
+
+ADD INSTALLED ROOT FOLDER OF VIRTUALENV LOCATED IN Lib/site-packages/virtualenv to system variables for terminal to recognise it
+________________________________________________________________________________________________________________
+If virtualenv is installed but not recognized by the terminal, it may be due to an issue with the environment variables. Here are some steps you can try to resolve the issue:
+
+Make sure that virtualenv is installed globally by running pip3 install virtualenv or pip install virtualenv depending on your Python version.
+
+Check that the virtualenv executable is in your system's PATH environment variable. To do this, open your terminal and run the command echo $PATH. If you don't see the path to the virtualenv executable (e.g. /usr/local/bin), you'll need to add it to your PATH.
+
+To add the path to virtualenv to your PATH environment variable, you can add the following line to your shell profile file (e.g. ~/.bashrc for Bash or ~/.zshrc for Zsh): export PATH="$PATH:/path/to/virtualenv/bin"
+
+Once you have added the path to your shell profile file, you can reload your profile by running the command source ~/.bashrc (or source ~/.zshrc if you are using Zsh).
+
+After reloading your profile, you should be able to use the virtualenv command in your terminal.

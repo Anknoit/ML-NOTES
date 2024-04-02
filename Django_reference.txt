@@ -1,0 +1,70 @@
+TIME @ 1:10:40
+________________________________________________________________________________________________________
+## Ctrl + / to comment out a line
+1. Create a new project
+>>>django-admin startproject <project_Name>
+2. Run project(You have to be in the directory where manage.py is present for the respective project)
+>>>python manage.py runserver
+3. Django works on MVT(Mode View Template) architecture
+>>>MVT is a software design pattern
+>>>Model - database creating information 
+>>>View - During runtime it will pull view from model and will send it to template
+>>>Template - will contain place holder for specific information that will be pulled from model to display
+>>>https://www.geekinsta.com/difference-between-mvc-and-mvt/
+4. Create an app within the project
+>>>python manage.py startapp <app_name>
+
+>>>Will have different files compared to files in the project folder i.e there will be NO settings.py file becausesetting is for project specific purpose and not for apps in the project
+>>>In you r project whatever app you are making is made using this method
+
+5. Create urls.py file in every app folder you create for redirection purposes 
+6. URL DISPATCHING
+>>>any url entered first goes to the url.py of PROJECT folder 
+>>>where it is redirected/forwarded to specific App.url 
+>>>then it is forwarded to views under specific function mentioned
+>>>WE DESIGN AND MAKE OUR APP under the app folders and the main PROJECT folder is for configuration and other controlling stuffs for entire project and apps under it
+
+7.STATIC FILE & TEMPLATES FILE
+>>>Files like image,JavaScript, CSS, audio, video, exe etc or anything that people can access or see when the come to your server
+>>>Create both folder outside main project folder as a separate shit
+>>>this is telling that sevrve the contents of Static Directory if url is "static" 
+>>>But you have to specify the file name under static file to display it coz it will not list everything just by going to "/static"
+>>>NEVER NEVER! put any security sensitive shit under static
+
+8. TYPES OF USERS - NORMAL & SUPER USER
+>>>Norma users are the clients that will have access to features that you provied
+>>>Super users are the users that will have Special privilages and access tou you websie
+>>>HOW TO CREATE SUPER USER??? - to handel admin operation
+	>>>python manage.py makemigrations------will detect any changes made in table of db
+	>>>python manage.py migrate----will detect any changes made in db schema
+	>>>python manage.py createsuperuser
+	>>>fill in the info which will then be stored db.sqlite3 file in your directory 
+9. HOW TO CHANGE HEADING OF DJANGO ADMIN panel and login FROM django administration to anything
+>>>Copy the following code in the urls.py of PROJECT folder
+admin.site.site_header = "UMSRA Admin"
+admin.site.site_title = "UMSRA Admin Portal"
+admin.site.index_title = "Welcome to UMSRA Researcher Portal"
+>>>And change text under "" to anything you want
+>>>you can customize the admin panel and also add CSS in it
+
+10. Git version control is done by making branch from main origin and naming each branch as the version you are going to work on and it will create a branch which
+will be used to write an upgraded version of code from main branch. 
+11. CREATING TABLES
+>>> Under models.py of app 
+>>>Create as many tables as you want
+>>> class <table_name>(models.Model):
+	<field_1> = models.CharField(max_length=100)
+	<field_2> = models.Charfield(max_length=100)
+	.
+	.
+	.
+    class <table_name2>(models.Model):
+	<field_1_2> = models.CharField(max_length=100)
+	<field_2_2> = models.Charfield(max_length=100)
+	.
+	.
+	.
+>>>python manage.py makemigrations
+>>>python manage.py migrates
+
+12. ERROR <frozen.bootstrabblablah> delete the migration folder cretated and makemigrations-->migrate

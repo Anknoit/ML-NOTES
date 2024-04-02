@@ -1,0 +1,4 @@
+Welcome to read.txt
+This text file is used for 
+experimenting in Python
+Enjoy.One new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using appendOne new line using append
